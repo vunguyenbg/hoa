@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
             switch (heroState)
             {
                 case HeroState.Idle:
-                    SetAnimation("tho");
+                    SetAnimation("tho", true);
                     break;
                 case HeroState.Move:
                     SetAnimation("chay", true);

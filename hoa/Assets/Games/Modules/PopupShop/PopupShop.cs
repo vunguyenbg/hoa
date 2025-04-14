@@ -1,4 +1,5 @@
 
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,16 +8,16 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Yoolax.Framework;
 
-public class PopupMainMenu : BasePopup
+public class PopupShop : BasePopup
 {
-    public static PopupMainMenu Instance;
+    public static PopupShop Instance;
 
     public static void Show()
     {
         if (Instance == null)
         {
-            GameObject temp = PopupManager.Instance.CreatePopup("PopupMainMenu");
-            Instance = temp.GetComponent<PopupMainMenu>();
+            GameObject temp = PopupManager.Instance.CreatePopup("PopupShop");
+            Instance = temp.GetComponent<PopupShop>();
         }
         Instance.gameObject.SetActive(true);
         Instance.Init();
@@ -35,21 +36,8 @@ public class PopupMainMenu : BasePopup
         base.Init();
     }
 
-    public void ButtonPlay()
+    public void ButtonClose()
     {
-        SceneManager.LoadScene("GamePlay");
-    }
-
-    public void ButtonSetting()
-    {
-        PopupSetting.Show(true, () =>
-        {
-            
-        });
-    }
-
-    public void ButtonShop()
-    {
-        PopupShop.Show();
+        Dismiss();
     }
 }

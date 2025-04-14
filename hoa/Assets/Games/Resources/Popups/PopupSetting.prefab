@@ -386,7 +386,6 @@ MonoBehaviour:
   ignoreMaskClose: 0
   isIntro: 1
   Intro_DOTweenAnimations:
-  - {fileID: 0}
   - {fileID: 7332032052370357742}
   isOutro: 0
   outroDuration: 0.6
