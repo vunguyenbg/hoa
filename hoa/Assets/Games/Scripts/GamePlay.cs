@@ -6,9 +6,15 @@ using UnityEngine;
 
 public class GamePlay : MonoBehaviour
 {
+    [SerializeField] private Player playerTemp;
     [SerializeField] private LevelManager levelManager;
     private Player player;
     [SerializeField] private bool isUsingButtonInput;
+
+    private void Awake()
+    {
+        playerTemp.gameObject.SetActive(false);
+    }
 
     private void Start()
     {

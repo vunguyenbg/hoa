@@ -88,7 +88,7 @@ namespace MoreMountains.CorgiEngine
 		public Stack<float> ContextSpeedStack = new Stack<float>();
 		public float ContextSpeedMultiplier => ContextSpeedStack.Count > 0 ? ContextSpeedStack.Peek() : 1;
                 
-		protected float _horizontalMovement;
+		public float _horizontalMovement;
 		protected float _lastGroundedHorizontalMovement;
 		protected float _horizontalMovementForce;
 		protected float _normalizedHorizontalSpeed;
