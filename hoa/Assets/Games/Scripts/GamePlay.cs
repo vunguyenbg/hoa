@@ -17,6 +17,7 @@ public class GamePlay : MonoBehaviour
         {
             player = levelManager.playerTemp.GetComponent<Player>(); 
         }));
+        PopupGamePlay.Show();
     }
 
     public void ButtonMoveLeft()
